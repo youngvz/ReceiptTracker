@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030018021D373CB200BD4A93 /* showDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030018011D373CB200BD4A93 /* showDateView.swift */; };
+		030018041D37431800BD4A93 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030018031D37431800BD4A93 /* Extensions.swift */; };
+		030018061D37443C00BD4A93 /* showCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030018051D37443C00BD4A93 /* showCategoryView.swift */; };
+		030018081D37538B00BD4A93 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030018071D37538B00BD4A93 /* CategoryCell.swift */; };
+		0300180E1D37C12F00BD4A93 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0300180D1D37C12F00BD4A93 /* DatePickerCell.swift */; };
 		030D53AC1D36950C00F8B116 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D53AB1D36950C00F8B116 /* AppDelegate.swift */; };
 		030D53AE1D36950C00F8B116 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D53AD1D36950C00F8B116 /* ViewController.swift */; };
 		030D53B11D36950C00F8B116 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030D53AF1D36950C00F8B116 /* Main.storyboard */; };
@@ -14,6 +19,9 @@
 		030D53B61D36950C00F8B116 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030D53B41D36950C00F8B116 /* LaunchScreen.storyboard */; };
 		030D53C11D36950C00F8B116 /* Reciept_TrackrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D53C01D36950C00F8B116 /* Reciept_TrackrTests.swift */; };
 		030D53CC1D36950D00F8B116 /* Reciept_TrackrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D53CB1D36950D00F8B116 /* Reciept_TrackrUITests.swift */; };
+		030D53DA1D3695E600F8B116 /* AddReceiptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D53D91D3695E600F8B116 /* AddReceiptController.swift */; };
+		036C9AF91D382C9B00363A00 /* AttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C9AF81D382C9B00363A00 /* AttachmentCell.swift */; };
+		036C9AFB1D382D1B00363A00 /* showAttachmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C9AFA1D382D1B00363A00 /* showAttachmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		030018011D373CB200BD4A93 /* showDateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showDateView.swift; sourceTree = "<group>"; };
+		030018031D37431800BD4A93 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		030018051D37443C00BD4A93 /* showCategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showCategoryView.swift; sourceTree = "<group>"; };
+		030018071D37538B00BD4A93 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		0300180D1D37C12F00BD4A93 /* DatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
 		030D53A81D36950C00F8B116 /* Reciept Trackr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reciept Trackr.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		030D53AB1D36950C00F8B116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		030D53AD1D36950C00F8B116 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +60,9 @@
 		030D53C71D36950D00F8B116 /* Reciept TrackrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reciept TrackrUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		030D53CB1D36950D00F8B116 /* Reciept_TrackrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reciept_TrackrUITests.swift; sourceTree = "<group>"; };
 		030D53CD1D36950D00F8B116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		030D53D91D3695E600F8B116 /* AddReceiptController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReceiptController.swift; sourceTree = "<group>"; };
+		036C9AF81D382C9B00363A00 /* AttachmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentCell.swift; sourceTree = "<group>"; };
+		036C9AFA1D382D1B00363A00 /* showAttachmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showAttachmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +90,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		030018091D3766C300BD4A93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				030018071D37538B00BD4A93 /* CategoryCell.swift */,
+				0300180D1D37C12F00BD4A93 /* DatePickerCell.swift */,
+				036C9AF81D382C9B00363A00 /* AttachmentCell.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0300180A1D3766EE00BD4A93 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				030018011D373CB200BD4A93 /* showDateView.swift */,
+				036C9AFA1D382D1B00363A00 /* showAttachmentView.swift */,
+				030018051D37443C00BD4A93 /* showCategoryView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0300180B1D3766FD00BD4A93 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				030018031D37431800BD4A93 /* Extensions.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		0300180C1D37671900BD4A93 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				030D53AD1D36950C00F8B116 /* ViewController.swift */,
+				030D53D91D3695E600F8B116 /* AddReceiptController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		030D539F1D36950C00F8B116 = {
 			isa = PBXGroup;
 			children = (
@@ -97,9 +150,12 @@
 		030D53AA1D36950C00F8B116 /* Reciept Trackr */ = {
 			isa = PBXGroup;
 			children = (
-				030D53AB1D36950C00F8B116 /* AppDelegate.swift */,
-				030D53AD1D36950C00F8B116 /* ViewController.swift */,
+				030018091D3766C300BD4A93 /* Model */,
+				0300180A1D3766EE00BD4A93 /* View */,
+				0300180C1D37671900BD4A93 /* Controller */,
+				0300180B1D3766FD00BD4A93 /* Helper */,
 				030D53AF1D36950C00F8B116 /* Main.storyboard */,
+				030D53AB1D36950C00F8B116 /* AppDelegate.swift */,
 				030D53B21D36950C00F8B116 /* Assets.xcassets */,
 				030D53B41D36950C00F8B116 /* LaunchScreen.storyboard */,
 				030D53B71D36950C00F8B116 /* Info.plist */,
@@ -256,8 +312,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030018041D37431800BD4A93 /* Extensions.swift in Sources */,
 				030D53AE1D36950C00F8B116 /* ViewController.swift in Sources */,
 				030D53AC1D36950C00F8B116 /* AppDelegate.swift in Sources */,
+				0300180E1D37C12F00BD4A93 /* DatePickerCell.swift in Sources */,
+				036C9AFB1D382D1B00363A00 /* showAttachmentView.swift in Sources */,
+				030018081D37538B00BD4A93 /* CategoryCell.swift in Sources */,
+				030D53DA1D3695E600F8B116 /* AddReceiptController.swift in Sources */,
+				036C9AF91D382C9B00363A00 /* AttachmentCell.swift in Sources */,
+				030018021D373CB200BD4A93 /* showDateView.swift in Sources */,
+				030018061D37443C00BD4A93 /* showCategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +546,7 @@
 				030D53D21D36950D00F8B116 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		030D53D31D36950D00F8B116 /* Build configuration list for PBXNativeTarget "Reciept TrackrTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +555,7 @@
 				030D53D51D36950D00F8B116 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		030D53D61D36950D00F8B116 /* Build configuration list for PBXNativeTarget "Reciept TrackrUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +564,7 @@
 				030D53D81D36950D00F8B116 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
