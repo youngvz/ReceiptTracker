@@ -11,11 +11,7 @@ import UIKit
 
 class DatePickerCell: BaseCell {
     
-    
-    var dateString: String = {
-        let string = String()
-        return string
-    }()
+    var delegate: writeDateBackDelegate?
     
     lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
@@ -28,6 +24,7 @@ class DatePickerCell: BaseCell {
         datePicker.addTarget(self, action: #selector(onDidChangeDate), forControlEvents: .ValueChanged)
         return datePicker
     }()
+        
     
     func onDidChangeDate(sender: UIDatePicker){
         // date format
@@ -37,8 +34,8 @@ class DatePickerCell: BaseCell {
         // get the date string applied date format
         let mySelectedDate: NSString = myDateFormatter.stringFromDate(sender.date)
         
-        dateString = mySelectedDate as String
-        print(dateString)
+        delegate?.writeDateBack(mySelectedDate as String)
+        print(mySelectedDate as String)
         
 
     }
@@ -47,7 +44,7 @@ class DatePickerCell: BaseCell {
         super.setupViews()
         
         addSubview(datePicker)
-        
+
         //        //x,y,w,h
                 datePicker.leftAnchor.constraintEqualToAnchor(self.leftAnchor).active = true
                 datePicker.bottomAnchor.constraintEqualToAnchor(self.bottomAnchor).active = true

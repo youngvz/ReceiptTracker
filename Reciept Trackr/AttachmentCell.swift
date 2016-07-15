@@ -13,6 +13,7 @@ class AttachmentCell: BaseCell {
     let attachmentImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.backgroundColor = UIColor.whiteColor()
         imageView.contentMode = .ScaleAspectFit
         return imageView
         
@@ -20,6 +21,14 @@ class AttachmentCell: BaseCell {
     override func setupViews() {
         super.setupViews()
         backgroundColor = UIColor.whiteColor()
-        //do stuff here
+        
+        addSubview(attachmentImageView)
+        
+        //x,y,w,h
+        attachmentImageView.centerXAnchor.constraintEqualToAnchor(self.centerXAnchor).active = true
+        attachmentImageView.centerYAnchor.constraintEqualToAnchor(self.centerYAnchor).active = true
+        attachmentImageView.widthAnchor.constraintEqualToAnchor(self.widthAnchor).active = true
+        attachmentImageView.heightAnchor.constraintEqualToAnchor(self.heightAnchor).active = true
+        
     }
 }
