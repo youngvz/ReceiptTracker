@@ -12,6 +12,11 @@ import UIKit
 class DatePickerCell: BaseCell {
     
     
+    var dateString: String = {
+        let string = String()
+        return string
+    }()
+    
     lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +36,9 @@ class DatePickerCell: BaseCell {
         
         // get the date string applied date format
         let mySelectedDate: NSString = myDateFormatter.stringFromDate(sender.date)
-        print(mySelectedDate)
+        
+        dateString = mySelectedDate as String
+        print(dateString)
         
 
     }

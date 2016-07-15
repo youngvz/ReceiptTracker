@@ -22,6 +22,11 @@ class showDateView: NSObject, UICollectionViewDelegate, UICollectionViewDataSour
     
     let cellId = "cellId"
     
+    var dateString: String = {
+        let dstring = String()
+        return dstring
+    }()
+    
     func showDates(){
         
         if let window = UIApplication.sharedApplication().keyWindow{
@@ -52,6 +57,7 @@ class showDateView: NSObject, UICollectionViewDelegate, UICollectionViewDataSour
     func handleDismiss(){
         UIView.animateWithDuration(0.5) {
             self.blackView.alpha = 0
+            self.delegate?.writeDateBack(self.dateString)
 
             
             if let window = UIApplication.sharedApplication().keyWindow{
@@ -74,7 +80,6 @@ class showDateView: NSObject, UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
         handleDismiss()
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

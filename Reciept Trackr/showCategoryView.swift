@@ -89,8 +89,9 @@ class showCategoryView: NSObject, UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CategoryCell
         
-        
+        delegate?.writeCategoryBack(cell.nameLabel.text!)
         handleDismiss()
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
