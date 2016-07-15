@@ -10,21 +10,23 @@ import UIKit
 
 class showAttachmentView: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    
+    var selectedImage: UIImage?
     let blackView = UIView()
+    let cellId = "cellId"
+
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = UIColor.whiteColor()
+        
         return cv
     }()
     
-    let cellId = "cellId"
-    
-    func showAttachment(){
+    func showAttachment(image: UIImage){
         
-        
+        selectedImage = image
+        collectionView.reloadData()
         if let window = UIApplication.sharedApplication().keyWindow{
             
             window.addSubview(collectionView)
@@ -44,7 +46,7 @@ class showAttachmentView: NSObject, UICollectionViewDelegate, UICollectionViewDa
     func hideAttachment(){
         if let window = UIApplication.sharedApplication().keyWindow{
             self.collectionView.frame = CGRectMake(0, window.frame.height, self.collectionView.frame.width, self.collectionView.frame.height)
-            
+            self.collectionView.reloadData()
         }
     }
 
@@ -66,9 +68,10 @@ class showAttachmentView: NSObject, UICollectionViewDelegate, UICollectionViewDa
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath) as! AttachmentCell
         
+        cell.attachmentImageView.image = selectedImage
+        
         return cell
     }
-
     
     override init() {
         super.init()

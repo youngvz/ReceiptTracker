@@ -18,6 +18,8 @@ class Category: NSObject{
     }
 }
 
+let cellId = "cellId"
+
 class showCategoryView: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var delegate: writeCategoryBackDelegate?
@@ -30,8 +32,6 @@ class showCategoryView: NSObject, UICollectionViewDelegate, UICollectionViewData
         return cv
     }()
     
-    let cellId = "cellId"
-    
     let categories: [Category] = {
         
         
@@ -39,7 +39,6 @@ class showCategoryView: NSObject, UICollectionViewDelegate, UICollectionViewData
     }()
     
     func showCategory(){
-        
         
         if let window = UIApplication.sharedApplication().keyWindow{
             
@@ -84,6 +83,7 @@ class showCategoryView: NSObject, UICollectionViewDelegate, UICollectionViewData
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
     }
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return 0
     }
@@ -94,6 +94,7 @@ class showCategoryView: NSObject, UICollectionViewDelegate, UICollectionViewData
         delegate?.writeCategoryBack(cell.nameLabel.text!)
         handleDismiss()
     }
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath) as! CategoryCell
         let category = categories[indexPath.item]

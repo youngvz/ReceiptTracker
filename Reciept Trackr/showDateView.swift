@@ -8,7 +8,7 @@
 
 import UIKit
 
-class showDateView: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIPickerViewDelegate {
+class showDateView: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIPickerViewDelegate,writeDateBackDelegate {
     
     var delegate: writeDateBackDelegate?
     let blackView = UIView()
@@ -22,10 +22,15 @@ class showDateView: NSObject, UICollectionViewDelegate, UICollectionViewDataSour
     
     let cellId = "cellId"
     
+    
     var dateString: String = {
         let dstring = String()
         return dstring
     }()
+    
+    func writeDateBack(value: String) {
+        dateString = value
+    }
     
     func showDates(){
         
@@ -58,6 +63,7 @@ class showDateView: NSObject, UICollectionViewDelegate, UICollectionViewDataSour
         UIView.animateWithDuration(0.5) {
             self.blackView.alpha = 0
             self.delegate?.writeDateBack(self.dateString)
+            
 
             
             if let window = UIApplication.sharedApplication().keyWindow{
@@ -83,7 +89,9 @@ class showDateView: NSObject, UICollectionViewDelegate, UICollectionViewDataSour
         handleDismiss()
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath) as! DatePickerCell
+        
+        cell.delegate = self
         
         return cell
     }
