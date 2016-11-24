@@ -12,10 +12,10 @@ extension AddReceiptController: UINavigationControllerDelegate{
     
     func setupInputsContainerView(){
         //x,y,w,h constraints
-        inputsContainerView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor).active = true
-        inputsContainerView.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: 70).active = true
-        inputsContainerView.widthAnchor.constraintEqualToAnchor(view.widthAnchor).active = true
-        inputsContainerView.heightAnchor.constraintEqualToConstant(160).active = true
+        inputsContainerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        inputsContainerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 70).isActive = true
+        inputsContainerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        inputsContainerView.heightAnchor.constraint(equalToConstant: 160).isActive = true
         
         inputsContainerView.addSubview(merchantImageView)
         inputsContainerView.addSubview(merchantLabel)
@@ -42,119 +42,119 @@ extension AddReceiptController: UINavigationControllerDelegate{
         
         //merchant ui layouts
         //x,y,w,h constraints
-        merchantImageView.leftAnchor.constraintEqualToAnchor(inputsContainerView.leftAnchor, constant: 6).active = true
-        merchantImageView.topAnchor.constraintEqualToAnchor(inputsContainerView.topAnchor).active = true
-        merchantImageView.widthAnchor.constraintEqualToConstant(30).active = true
-        merchantImageView.heightAnchor.constraintEqualToConstant(30).active = true
+        merchantImageView.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 6).isActive = true
+        merchantImageView.topAnchor.constraint(equalTo: inputsContainerView.topAnchor).isActive = true
+        merchantImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        merchantImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
-        merchantLabel.leftAnchor.constraintEqualToAnchor(merchantImageView.rightAnchor, constant: 12).active = true
-        merchantLabel.topAnchor.constraintEqualToAnchor(inputsContainerView.topAnchor).active = true
-        merchantLabel.widthAnchor.constraintEqualToConstant(100).active = true
-        merchantLabel.heightAnchor.constraintEqualToConstant(40).active = true
+        merchantLabel.leftAnchor.constraint(equalTo: merchantImageView.rightAnchor, constant: 12).isActive = true
+        merchantLabel.topAnchor.constraint(equalTo: inputsContainerView.topAnchor).isActive = true
+        merchantLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        merchantLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        merchantTextField.leftAnchor.constraintEqualToAnchor(merchantLabel.rightAnchor).active = true
-        merchantTextField.centerYAnchor.constraintEqualToAnchor(merchantLabel.centerYAnchor).active = true
-        merchantTextField.rightAnchor.constraintEqualToAnchor(inputsContainerView.rightAnchor, constant: -6).active = true
-        merchantTextField.heightAnchor.constraintEqualToConstant(40).active = true
+        merchantTextField.leftAnchor.constraint(equalTo: merchantLabel.rightAnchor).isActive = true
+        merchantTextField.centerYAnchor.constraint(equalTo: merchantLabel.centerYAnchor).isActive = true
+        merchantTextField.rightAnchor.constraint(equalTo: inputsContainerView.rightAnchor, constant: -6).isActive = true
+        merchantTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        merchantSeparatorView.leftAnchor.constraintEqualToAnchor(merchantLabel.leftAnchor).active = true
-        merchantSeparatorView.topAnchor.constraintEqualToAnchor(merchantLabel.bottomAnchor).active = true
-        merchantSeparatorView.widthAnchor.constraintEqualToAnchor(inputsContainerView.widthAnchor).active = true
-        merchantSeparatorView.heightAnchor.constraintEqualToConstant(1).active = true
+        merchantSeparatorView.leftAnchor.constraint(equalTo: merchantLabel.leftAnchor).isActive = true
+        merchantSeparatorView.topAnchor.constraint(equalTo: merchantLabel.bottomAnchor).isActive = true
+        merchantSeparatorView.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
+        merchantSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         
         //Date ui Layouts
         //x,y,w,h
-        dateImageView.leftAnchor.constraintEqualToAnchor(inputsContainerView.leftAnchor, constant: 6).active = true
-        dateImageView.topAnchor.constraintEqualToAnchor(merchantImageView.bottomAnchor, constant: 12).active = true
-        dateImageView.widthAnchor.constraintEqualToConstant(30).active = true
-        dateImageView.heightAnchor.constraintEqualToConstant(30).active = true
+        dateImageView.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 6).isActive = true
+        dateImageView.topAnchor.constraint(equalTo: merchantImageView.bottomAnchor, constant: 12).isActive = true
+        dateImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        dateImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         
-        dateLabel.leftAnchor.constraintEqualToAnchor(dateImageView.rightAnchor, constant: 12).active = true
-        dateLabel.topAnchor.constraintEqualToAnchor(merchantImageView.bottomAnchor, constant: 6).active = true
-        dateLabel.widthAnchor.constraintEqualToConstant(120).active = true
-        dateLabel.heightAnchor.constraintEqualToConstant(40).active = true
+        dateLabel.leftAnchor.constraint(equalTo: dateImageView.rightAnchor, constant: 12).isActive = true
+        dateLabel.topAnchor.constraint(equalTo: merchantImageView.bottomAnchor, constant: 6).isActive = true
+        dateLabel.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        dateLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        dateTextLabel.leftAnchor.constraintEqualToAnchor(dateLabel.rightAnchor).active = true
-        dateTextLabel.centerYAnchor.constraintEqualToAnchor(dateLabel.centerYAnchor).active = true
-        dateTextLabel.rightAnchor.constraintEqualToAnchor(inputsContainerView.rightAnchor, constant: -6).active = true
-        dateTextLabel.heightAnchor.constraintEqualToConstant(35).active = true
+        dateTextLabel.leftAnchor.constraint(equalTo: dateLabel.rightAnchor).isActive = true
+        dateTextLabel.centerYAnchor.constraint(equalTo: dateLabel.centerYAnchor).isActive = true
+        dateTextLabel.rightAnchor.constraint(equalTo: inputsContainerView.rightAnchor, constant: -6).isActive = true
+        dateTextLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
         
-        dateSeparatorView.leftAnchor.constraintEqualToAnchor(dateLabel.leftAnchor).active = true
-        dateSeparatorView.topAnchor.constraintEqualToAnchor(dateLabel.bottomAnchor).active = true
-        dateSeparatorView.widthAnchor.constraintEqualToAnchor(inputsContainerView.widthAnchor).active = true
-        dateSeparatorView.heightAnchor.constraintEqualToConstant(1).active = true
+        dateSeparatorView.leftAnchor.constraint(equalTo: dateLabel.leftAnchor).isActive = true
+        dateSeparatorView.topAnchor.constraint(equalTo: dateLabel.bottomAnchor).isActive = true
+        dateSeparatorView.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
+        dateSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         //Total ui Layouts
         //x,y,w,h
-        totalImageView.leftAnchor.constraintEqualToAnchor(inputsContainerView.leftAnchor, constant: 6).active = true
-        totalImageView.topAnchor.constraintEqualToAnchor(dateImageView.bottomAnchor, constant: 12).active = true
-        totalImageView.widthAnchor.constraintEqualToConstant(30).active = true
-        totalImageView.heightAnchor.constraintEqualToConstant(30).active = true
+        totalImageView.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 6).isActive = true
+        totalImageView.topAnchor.constraint(equalTo: dateImageView.bottomAnchor, constant: 12).isActive = true
+        totalImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        totalImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
-        totalLabel.leftAnchor.constraintEqualToAnchor(totalImageView.rightAnchor, constant: 12).active = true
-        totalLabel.topAnchor.constraintEqualToAnchor(dateImageView.bottomAnchor, constant: 6).active = true
-        totalLabel.widthAnchor.constraintEqualToConstant(120).active = true
-        totalLabel.heightAnchor.constraintEqualToConstant(40).active = true
+        totalLabel.leftAnchor.constraint(equalTo: totalImageView.rightAnchor, constant: 12).isActive = true
+        totalLabel.topAnchor.constraint(equalTo: dateImageView.bottomAnchor, constant: 6).isActive = true
+        totalLabel.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        totalLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        totalTextField.leftAnchor.constraintEqualToAnchor(totalLabel.rightAnchor).active = true
-        totalTextField.centerYAnchor.constraintEqualToAnchor(totalLabel.centerYAnchor).active = true
-        totalTextField.rightAnchor.constraintEqualToAnchor(inputsContainerView.rightAnchor, constant: -6).active = true
-        totalTextField.heightAnchor.constraintEqualToConstant(35).active = true
+        totalTextField.leftAnchor.constraint(equalTo: totalLabel.rightAnchor).isActive = true
+        totalTextField.centerYAnchor.constraint(equalTo: totalLabel.centerYAnchor).isActive = true
+        totalTextField.rightAnchor.constraint(equalTo: inputsContainerView.rightAnchor, constant: -6).isActive = true
+        totalTextField.heightAnchor.constraint(equalToConstant: 35).isActive = true
         
-        totalSeparatorView.leftAnchor.constraintEqualToAnchor(totalLabel.leftAnchor).active = true
-        totalSeparatorView.topAnchor.constraintEqualToAnchor(totalLabel.bottomAnchor).active = true
-        totalSeparatorView.widthAnchor.constraintEqualToAnchor(inputsContainerView.widthAnchor).active = true
-        totalSeparatorView.heightAnchor.constraintEqualToConstant(1).active = true
+        totalSeparatorView.leftAnchor.constraint(equalTo: totalLabel.leftAnchor).isActive = true
+        totalSeparatorView.topAnchor.constraint(equalTo: totalLabel.bottomAnchor).isActive = true
+        totalSeparatorView.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
+        totalSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
         //Category ui Layouts
         //x,y,w,h
-        categoryImageView.leftAnchor.constraintEqualToAnchor(inputsContainerView.leftAnchor, constant: 6).active = true
-        categoryImageView.topAnchor.constraintEqualToAnchor(totalImageView.bottomAnchor, constant: 12).active = true
-        categoryImageView.widthAnchor.constraintEqualToConstant(30).active = true
-        categoryImageView.heightAnchor.constraintEqualToConstant(30).active = true
+        categoryImageView.leftAnchor.constraint(equalTo: inputsContainerView.leftAnchor, constant: 6).isActive = true
+        categoryImageView.topAnchor.constraint(equalTo: totalImageView.bottomAnchor, constant: 12).isActive = true
+        categoryImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        categoryImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
-        categoryLabel.leftAnchor.constraintEqualToAnchor(categoryImageView.rightAnchor, constant: 12).active = true
-        categoryLabel.topAnchor.constraintEqualToAnchor(totalImageView.bottomAnchor, constant: 6).active = true
-        categoryLabel.widthAnchor.constraintEqualToConstant(120).active = true
-        categoryLabel.heightAnchor.constraintEqualToConstant(40).active = true
+        categoryLabel.leftAnchor.constraint(equalTo: categoryImageView.rightAnchor, constant: 12).isActive = true
+        categoryLabel.topAnchor.constraint(equalTo: totalImageView.bottomAnchor, constant: 6).isActive = true
+        categoryLabel.widthAnchor.constraint(equalToConstant: 120).isActive = true
+        categoryLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        categoryForwardView.rightAnchor.constraintEqualToAnchor(inputsContainerView.rightAnchor).active = true
-        categoryForwardView.centerYAnchor.constraintEqualToAnchor(categoryImageView.centerYAnchor).active = true
-        categoryForwardView.widthAnchor.constraintEqualToConstant(30).active = true
-        categoryImageView.heightAnchor.constraintEqualToConstant(30).active = true
+        categoryForwardView.rightAnchor.constraint(equalTo: inputsContainerView.rightAnchor).isActive = true
+        categoryForwardView.centerYAnchor.constraint(equalTo: categoryImageView.centerYAnchor).isActive = true
+        categoryForwardView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        categoryImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
-        categoryTextLabel.leftAnchor.constraintEqualToAnchor(categoryLabel.rightAnchor, constant: -6).active = true
-        categoryTextLabel.centerYAnchor.constraintEqualToAnchor(categoryLabel.centerYAnchor).active = true
-        categoryTextLabel.rightAnchor.constraintEqualToAnchor(categoryForwardView.leftAnchor).active = true
-        categoryTextLabel.heightAnchor.constraintEqualToConstant(30).active = true
+        categoryTextLabel.leftAnchor.constraint(equalTo: categoryLabel.rightAnchor, constant: -6).isActive = true
+        categoryTextLabel.centerYAnchor.constraint(equalTo: categoryLabel.centerYAnchor).isActive = true
+        categoryTextLabel.rightAnchor.constraint(equalTo: categoryForwardView.leftAnchor).isActive = true
+        categoryTextLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
-        categorySeparatorView.leftAnchor.constraintEqualToAnchor(categoryLabel.leftAnchor).active = true
-        categorySeparatorView.topAnchor.constraintEqualToAnchor(categoryLabel.bottomAnchor).active = true
-        categorySeparatorView.widthAnchor.constraintEqualToAnchor(inputsContainerView.widthAnchor).active = true
-        categorySeparatorView.heightAnchor.constraintEqualToConstant(1).active = true
+        categorySeparatorView.leftAnchor.constraint(equalTo: categoryLabel.leftAnchor).isActive = true
+        categorySeparatorView.topAnchor.constraint(equalTo: categoryLabel.bottomAnchor).isActive = true
+        categorySeparatorView.widthAnchor.constraint(equalTo: inputsContainerView.widthAnchor).isActive = true
+        categorySeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
     }
     func setupAttachmentContainerView(){
         //x,y,w,h
-        attachmentContainerView.leftAnchor.constraintEqualToAnchor(view.leftAnchor).active = true
-        attachmentContainerView.topAnchor.constraintEqualToAnchor(inputsContainerView.bottomAnchor, constant: 6).active = true
-        attachmentContainerView.widthAnchor.constraintEqualToAnchor(view.widthAnchor).active = true
-        attachmentContainerView.heightAnchor.constraintEqualToConstant(40).active = true
+        attachmentContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        attachmentContainerView.topAnchor.constraint(equalTo: inputsContainerView.bottomAnchor, constant: 6).isActive = true
+        attachmentContainerView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        attachmentContainerView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         attachmentContainerView.addSubview(attachmentLabel)
         attachmentContainerView.addSubview(attachmentImageView)
         
-        attachmentLabel.leftAnchor.constraintEqualToAnchor(attachmentContainerView.leftAnchor).active = true
-        attachmentLabel.topAnchor.constraintEqualToAnchor(attachmentContainerView.topAnchor).active = true
-        attachmentLabel.rightAnchor.constraintEqualToAnchor(attachmentContainerView.rightAnchor).active = true
-        attachmentLabel.heightAnchor.constraintEqualToConstant(40).active = true
+        attachmentLabel.leftAnchor.constraint(equalTo: attachmentContainerView.leftAnchor).isActive = true
+        attachmentLabel.topAnchor.constraint(equalTo: attachmentContainerView.topAnchor).isActive = true
+        attachmentLabel.rightAnchor.constraint(equalTo: attachmentContainerView.rightAnchor).isActive = true
+        attachmentLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        attachmentImageView.rightAnchor.constraintEqualToAnchor(attachmentContainerView.rightAnchor, constant: -12).active = true
-        attachmentImageView.centerYAnchor.constraintEqualToAnchor(attachmentLabel.centerYAnchor).active = true
-        attachmentImageView.widthAnchor.constraintEqualToConstant(30).active = true
-        attachmentImageView.heightAnchor.constraintEqualToConstant(30).active = true
+        attachmentImageView.rightAnchor.constraint(equalTo: attachmentContainerView.rightAnchor, constant: -12).isActive = true
+        attachmentImageView.centerYAnchor.constraint(equalTo: attachmentLabel.centerYAnchor).isActive = true
+        attachmentImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        attachmentImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
         
     }

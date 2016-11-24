@@ -18,25 +18,25 @@ class showAttachmentView: NSObject, UICollectionViewDelegate, UICollectionViewDa
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = UIColor.whiteColor()
+        cv.backgroundColor = UIColor.white
         
         return cv
     }()
     
-    func showAttachment(image: UIImage){
+    func showAttachment(_ image: UIImage){
         
         selectedImage = image
         collectionView.reloadData()
-        if let window = UIApplication.sharedApplication().keyWindow{
+        if let window = UIApplication.shared.keyWindow{
             
             window.addSubview(collectionView)
             
             let height: CGFloat = 200
-            collectionView.frame = CGRectMake(0, window.frame.height, window.frame.width, height)
+            collectionView.frame = CGRect(x: 0, y: window.frame.height, width: window.frame.width, height: height)
             
-            UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .CurveEaseOut, animations: {
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                 self.blackView.alpha = 1
-                self.collectionView.frame = CGRectMake(0, 280, self.collectionView.frame.width, self.collectionView.frame.height)
+                self.collectionView.frame = CGRect(x: 0, y: 280, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
                 }, completion: nil)
         }
         
@@ -44,29 +44,29 @@ class showAttachmentView: NSObject, UICollectionViewDelegate, UICollectionViewDa
     }
     
     func hideAttachment(){
-        if let window = UIApplication.sharedApplication().keyWindow{
-            self.collectionView.frame = CGRectMake(0, window.frame.height, self.collectionView.frame.width, self.collectionView.frame.height)
+        if let window = UIApplication.shared.keyWindow{
+            self.collectionView.frame = CGRect(x: 0, y: window.frame.height, width: self.collectionView.frame.width, height: self.collectionView.frame.height)
             self.collectionView.reloadData()
         }
     }
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(collectionView.frame.width, collectionView.frame.height)
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
         
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellId, forIndexPath: indexPath) as! AttachmentCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AttachmentCell
         
         cell.attachmentImageView.image = selectedImage
         
@@ -79,7 +79,7 @@ class showAttachmentView: NSObject, UICollectionViewDelegate, UICollectionViewDa
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        collectionView.registerClass(AttachmentCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(AttachmentCell.self, forCellWithReuseIdentifier: cellId)
     }
 
 }

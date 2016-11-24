@@ -16,23 +16,23 @@ class DatePickerCell: BaseCell {
     lazy var datePicker: UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.translatesAutoresizingMaskIntoConstraints = false
-        datePicker.timeZone = NSTimeZone.localTimeZone()
-        datePicker.backgroundColor = UIColor.whiteColor()
+        datePicker.timeZone = TimeZone.autoupdatingCurrent
+        datePicker.backgroundColor = UIColor.white
         datePicker.layer.cornerRadius = 5.0
         datePicker.layer.shadowOpacity = 0.5
-        datePicker.datePickerMode = UIDatePickerMode.Date
-        datePicker.addTarget(self, action: #selector(onDidChangeDate), forControlEvents: .ValueChanged)
+        datePicker.datePickerMode = UIDatePickerMode.date
+        datePicker.addTarget(self, action: #selector(onDidChangeDate), for: .valueChanged)
         return datePicker
     }()
         
     
-    func onDidChangeDate(sender: UIDatePicker){
+    func onDidChangeDate(_ sender: UIDatePicker){
         // date format
-        let myDateFormatter: NSDateFormatter = NSDateFormatter()
+        let myDateFormatter: DateFormatter = DateFormatter()
         myDateFormatter.dateFormat = "MM/dd/yyyy"
         
         // get the date string applied date format
-        let mySelectedDate: NSString = myDateFormatter.stringFromDate(sender.date)
+        let mySelectedDate: NSString = myDateFormatter.string(from: sender.date) as NSString
         
         delegate?.writeDateBack(mySelectedDate as String)
         print(mySelectedDate as String)
@@ -46,10 +46,10 @@ class DatePickerCell: BaseCell {
         addSubview(datePicker)
 
         //        //x,y,w,h
-                datePicker.leftAnchor.constraintEqualToAnchor(self.leftAnchor).active = true
-                datePicker.bottomAnchor.constraintEqualToAnchor(self.bottomAnchor).active = true
-                datePicker.widthAnchor.constraintEqualToAnchor(self.widthAnchor).active = true
-                datePicker.heightAnchor.constraintEqualToAnchor(self.heightAnchor).active = true
+                datePicker.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+                datePicker.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+                datePicker.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+                datePicker.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
 
         
     }

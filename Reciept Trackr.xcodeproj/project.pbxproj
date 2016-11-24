@@ -22,6 +22,8 @@
 		030D53DA1D3695E600F8B116 /* AddReceiptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030D53D91D3695E600F8B116 /* AddReceiptController.swift */; };
 		036C9AF91D382C9B00363A00 /* AttachmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C9AF81D382C9B00363A00 /* AttachmentCell.swift */; };
 		036C9AFB1D382D1B00363A00 /* showAttachmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C9AFA1D382D1B00363A00 /* showAttachmentView.swift */; };
+		036C9AFD1D391F1700363A00 /* AddReceiptController+handlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C9AFC1D391F1700363A00 /* AddReceiptController+handlers.swift */; };
+		036C9AFF1D39A7EF00363A00 /* SetupAddReceiptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036C9AFE1D39A7EF00363A00 /* SetupAddReceiptView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		030D53D91D3695E600F8B116 /* AddReceiptController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddReceiptController.swift; sourceTree = "<group>"; };
 		036C9AF81D382C9B00363A00 /* AttachmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentCell.swift; sourceTree = "<group>"; };
 		036C9AFA1D382D1B00363A00 /* showAttachmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = showAttachmentView.swift; sourceTree = "<group>"; };
+		036C9AFC1D391F1700363A00 /* AddReceiptController+handlers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AddReceiptController+handlers.swift"; sourceTree = "<group>"; };
+		036C9AFE1D39A7EF00363A00 /* SetupAddReceiptView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupAddReceiptView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,9 +97,7 @@
 		030018091D3766C300BD4A93 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				030018071D37538B00BD4A93 /* CategoryCell.swift */,
-				0300180D1D37C12F00BD4A93 /* DatePickerCell.swift */,
-				036C9AF81D382C9B00363A00 /* AttachmentCell.swift */,
+				036C9B021D39ABFC00363A00 /* addReceiptModels */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -103,9 +105,7 @@
 		0300180A1D3766EE00BD4A93 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				030018011D373CB200BD4A93 /* showDateView.swift */,
-				036C9AFA1D382D1B00363A00 /* showAttachmentView.swift */,
-				030018051D37443C00BD4A93 /* showCategoryView.swift */,
+				036C9B001D39ABD500363A00 /* addReceiptViews */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				030D53AD1D36950C00F8B116 /* ViewController.swift */,
-				030D53D91D3695E600F8B116 /* AddReceiptController.swift */,
+				036C9B011D39ABED00363A00 /* addReceiptControllers */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -179,6 +179,36 @@
 				030D53CD1D36950D00F8B116 /* Info.plist */,
 			);
 			path = "Reciept TrackrUITests";
+			sourceTree = "<group>";
+		};
+		036C9B001D39ABD500363A00 /* addReceiptViews */ = {
+			isa = PBXGroup;
+			children = (
+				030018011D373CB200BD4A93 /* showDateView.swift */,
+				036C9AFA1D382D1B00363A00 /* showAttachmentView.swift */,
+				030018051D37443C00BD4A93 /* showCategoryView.swift */,
+				036C9AFE1D39A7EF00363A00 /* SetupAddReceiptView.swift */,
+			);
+			name = addReceiptViews;
+			sourceTree = "<group>";
+		};
+		036C9B011D39ABED00363A00 /* addReceiptControllers */ = {
+			isa = PBXGroup;
+			children = (
+				030D53D91D3695E600F8B116 /* AddReceiptController.swift */,
+				036C9AFC1D391F1700363A00 /* AddReceiptController+handlers.swift */,
+			);
+			name = addReceiptControllers;
+			sourceTree = "<group>";
+		};
+		036C9B021D39ABFC00363A00 /* addReceiptModels */ = {
+			isa = PBXGroup;
+			children = (
+				030018071D37538B00BD4A93 /* CategoryCell.swift */,
+				0300180D1D37C12F00BD4A93 /* DatePickerCell.swift */,
+				036C9AF81D382C9B00363A00 /* AttachmentCell.swift */,
+			);
+			name = addReceiptModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,18 +274,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Vetek Systems";
 				TargetAttributes = {
 					030D53A71D36950C00F8B116 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 					};
 					030D53BB1D36950C00F8B116 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 030D53A71D36950C00F8B116;
 					};
 					030D53C61D36950D00F8B116 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 						TestTargetID = 030D53A71D36950C00F8B116;
 					};
 				};
@@ -321,6 +354,8 @@
 				030D53DA1D3695E600F8B116 /* AddReceiptController.swift in Sources */,
 				036C9AF91D382C9B00363A00 /* AttachmentCell.swift in Sources */,
 				030018021D373CB200BD4A93 /* showDateView.swift in Sources */,
+				036C9AFF1D39A7EF00363A00 /* SetupAddReceiptView.swift in Sources */,
+				036C9AFD1D391F1700363A00 /* AddReceiptController+handlers.swift in Sources */,
 				030018061D37443C00BD4A93 /* showCategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,8 +425,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -435,8 +472,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -455,6 +494,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -467,6 +507,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reciepttrackr.Reciept-Trackr";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -478,6 +519,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reciepttrackr.Reciept-Trackr";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -489,6 +531,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reciepttrackr.Reciept-TrackrTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reciept Trackr.app/Reciept Trackr";
 			};
 			name = Debug;
@@ -501,6 +544,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reciepttrackr.Reciept-TrackrTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Reciept Trackr.app/Reciept Trackr";
 			};
 			name = Release;
@@ -512,6 +556,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reciepttrackr.Reciept-TrackrUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Reciept Trackr";
 			};
 			name = Debug;
@@ -523,6 +568,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.reciepttrackr.Reciept-TrackrUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Reciept Trackr";
 			};
 			name = Release;

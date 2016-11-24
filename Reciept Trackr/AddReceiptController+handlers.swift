@@ -13,23 +13,23 @@ extension AddReceiptController: UIImagePickerControllerDelegate{
     func handleTap(){
         attachmentView.hideAttachment()
         
-        let actionSheetController: UIAlertController = UIAlertController(title: nil, message: "Choose an option", preferredStyle: .ActionSheet)
+        let actionSheetController: UIAlertController = UIAlertController(title: nil, message: "Choose an option", preferredStyle: .actionSheet)
         
-        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
         }
         actionSheetController.addAction(cancelAction)
-        let takePictureAction: UIAlertAction = UIAlertAction(title: "Choose From Cameral Roll", style: .Default) { action -> Void in
+        let takePictureAction: UIAlertAction = UIAlertAction(title: "Choose From Cameral Roll", style: .default) { action -> Void in
             
             self.handleCameraLibrary()
         }
         actionSheetController.addAction(takePictureAction)
-        let choosePictureAction: UIAlertAction = UIAlertAction(title: "Take Picture", style: .Default) { action -> Void in
+        let choosePictureAction: UIAlertAction = UIAlertAction(title: "Take Picture", style: .default) { action -> Void in
             
             self.handleCamera()
         }
         actionSheetController.addAction(choosePictureAction)
         
-        self.presentViewController(actionSheetController, animated: true, completion: nil)
+        self.present(actionSheetController, animated: true, completion: nil)
         
     }
 
@@ -38,21 +38,21 @@ extension AddReceiptController: UIImagePickerControllerDelegate{
         picker.delegate = self
         picker.allowsEditing = true
         
-        presentViewController(picker, animated: true, completion: nil)
+        present(picker, animated: true, completion: nil)
         
     }
     
     func handleCamera(){
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera;
             imagePicker.allowsEditing = false
-            self.presentViewController(imagePicker, animated: true, completion: nil)
+            self.present(imagePicker, animated: true, completion: nil)
         }
     }
     
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         var selectedImageFromPicker: UIImage?
         
@@ -67,12 +67,12 @@ extension AddReceiptController: UIImagePickerControllerDelegate{
             showAttachment(selectedImage)
         }
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
 }
     
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         print("Did Cancel")
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
 extension UIColor {

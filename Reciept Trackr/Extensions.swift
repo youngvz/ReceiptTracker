@@ -9,9 +9,9 @@
 import Foundation
 
 protocol writeDateBackDelegate {
-    func writeDateBack(value:String)
+    func writeDateBack(_ value:String)
 }
 
 protocol writeCategoryBackDelegate {
-    func writeCategoryBack(value:String)
+    func writeCategoryBack(_ value:String)
 }
